@@ -8,4 +8,7 @@
           - vlan_id: 10
             name: DMZ
             state: active
+          - vlan_id: 20
+            name: Internal
+            state: active
         state: merged

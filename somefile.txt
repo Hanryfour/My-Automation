@@ -1,0 +1,11 @@
+working on Pyeapi Module steps:
+ - enable eapi on eos devices 
+ - define eapi config file 
+    [connection:leaf1]
+    [connection:leaf2]
+    [DEFAULT]
+    transport: https
+    username: arista
+    password: arista123
+
+ - Initiate connection to your device using eapi

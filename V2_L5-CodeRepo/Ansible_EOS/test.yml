@@ -1,0 +1,19 @@
+---
+- name: Test123
+  hosts: leafs
+  tasks:
+    - name: Merge provided configuration with device configuration
+      arista.eos.eos_lacp_interfaces:
+        config:
+          - name: Ethernet1
+            rate: fast
+          - name: Ethernet2
+            rate: normal
+      #  state: merged
+    - name: Merge provided global LACP attributes with device attributes
+      arista.eos.eos_lacp:
+        config:
+          system:
+            priority: 10
+        state: merged
+
