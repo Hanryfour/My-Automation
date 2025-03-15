@@ -1,0 +1,45 @@
+---
+tenants:
+  - name: ACME
+    mac_vrf_vni_base: 10000
+    vrfs:
+      - name: VRF_A
+        vrf_vni: 10
+        svis:
+          - id: 10
+            name: DMZ
+            enabled: true
+            ip_address_virtual: 10.1.10.254/24
+          - id: 20
+            name: Internal
+            enabled: true
+            ip_address_virtual: 10.1.20.254/24
+          - id: 30
+            name: Internal
+            enabled: true
+            ip_address_virtual: 10.1.30.254/24
+    vrfs:
+      - name: VRF_B
+        vrf_vni: 20
+        svis:
+          - id: 40
+            name: Wharehouse
+            enabled: true
+            ip_address_virtual: 10.1.40.254/24
+    vrfs:
+      - name: VRF_Internal
+        vrf_vni: 30
+        svis:
+          - id: 60
+            name: Internal
+            enabled: true
+            ip_address_virtual: 10.1.50.254/24
+    vrfs:
+      - name: VRF_Internet
+        vrf_vni: 40
+        svis:
+          - id: 50
+            name: Internet
+            enabled: true
+            ip_address_virtual: 10.1.60.254/24
+          
