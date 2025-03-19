@@ -49,8 +49,8 @@ servers:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet7, Ethernet7 ]
         switches: [ borderleaf1, borderleaf2 ]
-        vlans: 50
-        mode: access
+        vlans: "50,60,30"
+        mode: trunk
         spanning_tree_portfast: edge
         port_channel:
           description: PortChannel Internet-fwl
@@ -60,8 +60,8 @@ servers:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet8, Ethernet8 ]
         switches: [ borderleaf1, borderleaf2 ]
-        vlans: 60
-        mode: access
+        vlans: "10,20,30,40"
+        mode: trunk
         spanning_tree_portfast: edge
         port_channel:
           description: PortChannel Internal-fwl
